@@ -11,7 +11,7 @@ VLAN = input("Enter the VLAN ID: ")
 Name = input("Name of VLAN: ")
 
 device.send_command('conf t')
-config_commands = [VLAN , Name]
+config_commands = ['Vlan' + str(VLAN) , 'name' + str(Name)]
 output = net_connect.send_config_set(config_commands)
 print(output)
 input()
